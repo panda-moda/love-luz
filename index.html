@@ -1,177 +1,215 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<title>Para Ti ❤️</title>
-
-<style>
-body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(135deg, #ff758c, #ff7eb3);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-}
-
-.card {
-  background: white;
-  width: 90%;
-  max-width: 380px;
-  border-radius: 25px;
-  padding: 20px;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.25);
-  animation: fadeIn 1.5s ease;
-  text-align: center;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-.title {
-  color: #e60073;
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-
-.names {
-  font-weight: bold;
-  color: #ff4d88;
-  margin-bottom: 15px;
-}
-
-.slider {
-  position: relative;
-  overflow: hidden;
-  border-radius: 20px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-}
-
-.slider img {
-  width: 100%;
-  display: none;
-}
-
-.slider img.active {
-  display: block;
-}
-
-video {
-  width: 100%;
-  border-radius: 20px;
-  margin-top: 15px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-}
-
-.question {
-  font-size: 20px;
-  margin: 20px 0;
-  color: #333;
-}
-
-.buttons {
-  position: relative;
-  height: 80px;
-}
-
-button {
-  font-size: 18px;
-  padding: 10px 22px;
-  border: none;
-  border-radius: 30px;
-  cursor: pointer;
-  transition: transform 0.3s;
-}
-
-#yes {
-  background: #ff4d88;
-  color: white;
-}
-
-#no {
-  background: #ddd;
-  position: absolute;
-}
-
-.footer {
-  margin-top: 15px;
-  font-size: 14px;
-  color: #888;
-}
-</style>
+  <meta charset="UTF-8">
+  <title>Luz & Allison 💖</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
+<div class="hearts"></div>
+
 <body>
+<div class="stars"></div>
 
-<div class="card">
+<section class="hero">
+  <h1 id="typing">Para la mujer que cambió mi vida 💕</h1>
+  <p >Esto no es una página… es lo que siento por ti</p>
+</section>
 
-  <div class="title">Para mi amor ❤️</div>
-  <div class="names">Luz 💕 Allison</div>
+<button class="music-btn" onclick="playMusic()">
+  🎹 Toca aquí, amor
+</button>
 
-  <!-- GALERÍA -->
-  <div class="slider">
-    <img src="foto1.jpeg" class="active">
-    <img src="foto2.jpeg">
-    <img src="foto3.jpeg">
-    <img src="foto4.jpeg">
-    <img src="foto5.jpeg">
+
+
+<section class="historia" id="historia">
+
+  <h2>Nuestra historia ✨</h2>
+  
+  <p>
+  No llegaste a mi vida para llenar un vacío,<br>
+  llegaste para enseñarme a amar sin miedo.<br><br>
+
+  Si un día dudas de tu valor,<br>
+  recuerda que para mí<br>
+  siempre fuiste hogar.
+</p>
+
+</section>
+
+<section class="galeria reveal" id="galeria">
+ 
+
+
+ <section class="memories">
+  <h2>💞 Recuerdos que no se borran 📸</h2>
+
+  <div class="memory-grid">
+
+    <!-- FOTOS -->
+    <div class="memory">
+      <img src="images/foto1.jpeg">
+      <span>Elegirte todos los días 💖</span>
+    </div>
+    <div class="memory">
+      <img src="images/foto2.jpeg">
+      <span>Ni la distancia pudo 🌙</span>
+    </div>
+    <div class="memory">
+      <img src="images/foto3.jpeg">
+      <span>Mi lugar seguro ✨</span>
+    </div>
+    <div class="memory">
+      <img src="images/foto4.jpeg">
+      <span>Amarte es fácil 💕</span>
+    </div>
+    <div class="memory">
+      <img src="images/foto5.jpeg">
+      <span>Siempre tú 🫶</span>
+    </div>
+    <div class="memory">
+      <img src="images/foto6.jpeg">
+      <span>Mi hogar eres tú 🏡</span>
+    </div>
+    <div class="memory">
+      <img src="images/foto7.jpeg">
+      <span>Sonrisas que sanan 😍</span>
+    </div>
+    <div class="memory">
+      <img src="images/foto8.jpeg">
+      <span>Te volvería a elegir ♾️</span>
+    </div>
+    <div class="memory">
+      <img src="images/foto9.jpeg">
+      <span>Amor real ❤️</span>
+    </div>
+    <div class="memory">
+      <img src="images/foto10.jpeg">
+      <span>Nuestro para siempre 💍</span>
+    </div>
+
+    <!-- VIDEOS -->
+    <div class="memory video">
+      <video src="videos/video1.mp4" controls></video>
+      <span>Así suena mi felicidad</span>
+    </div>
+    <div class="memory video">
+      <video src="videos/video2.mp4" controls></video>
+      <span>Momentos que guardo en el alma</span>
+    </div>
+    <div class="memory video">
+      <video src="videos/video3.mp4" controls></video>
+      <span>Contigo todo tiene sentido</span>
+    </div>
+    <div class="memory video">
+      <video src="videos/video4.mp4" controls></video>
+      <span>Amor sin fronteras</span>
+    </div>
+    <div class="memory video">
+      <video src="videos/video5.mp4" controls></video>
+      <span>Mi risa favorita</span>
+    </div>
+    <div class="memory video">
+      <video src="videos/video6.mp4" controls></video>
+      <span>Siempre contigo</span>
+    </div>
+    <div class="memory video">
+      <video src="videos/video7.mp4" controls></video>
+      <span>Esto también es amor</span>
+    </div>
+    <div class="memory video">
+      <video src="videos/video8.mp4" controls></video>
+      <span>Para toda la vida</span>
+    </div>
+
   </div>
+</section>
 
-  <!-- VIDEO -->
+</section>
+
+
+<p>
+    No prometo un amor perfecto,<br>
+    pero sí uno que nunca huya.<br>
+    Si el mundo pesa,<br>
+    yo quiero ser tu descanso.
+  </p>
+
+  <section class="poema" class="carta reveal" id="poema">
+  <div class="carta-box">
+    <h2>Allison, amor de mi vida ✨</h2>
+
+    <p class="carta-text">
+      Amar a distancia no es fácil…<br>
+      pero amarte a ti siempre ha sido lo más natural que he hecho.<br><br>
+
+      No hay día que no te elija,<br>
+      no hay momento en el que no te piense,<br>
+      no hay instante en el que no agradezca<br>
+      por tu existencia en mi vida.<br><br>
+
+      Contigo aprendí a ser amiga,<br>
+      aprendí a ser madre desde el corazón,<br>
+      aprendí a ser hermana, cómplice,<br>
+      y sobre todo aprendí a ser feliz<br>
+      con el verdadero significado del amor.<br><br>
+
+      Tus hijos son parte de mí,<br>
+      los amo porque te amo a ti,<br>
+      porque cuando eliges a alguien como tú,<br>
+      eliges todo lo que viene con ella.<br><br>
+
+      A pesar de la distancia,<br>
+      sigues siendo mi hogar,<br>
+      mi calma,<br>
+      y la decisión más bonita de mi vida.<br><br>
+
+      Si el amor tuviera un nombre,<br>
+      para mí siempre sería el tuyo.
+    </p>
+
+    <span class="firma">— Luz 💕</span>
+  </div>
+</section>
+
+
+
+<section class="video">
   <video controls>
-    <source src="video.mp4" type="video/mp4">
+    <source src="videos/recuerdo.mp4" type="video/mp4">
   </video>
+</section>
 
-  <div class="question">
-    ¿Aceptas ser mi San Valentín para siempre ♥️?
-  </div>
-
-  <div class="buttons">
-    <button id="yes">Sí 💘</button>
-    <button id="no">No</button>
-  </div>
-
-  <div class="footer">
-    Hecho con amor 💖
-  </div>
-
+<div class="secreto">
+  <span onclick="mostrarSecreto()">💖</span>
+  <p id="mensajeSecreto">
+    Si tocaste este corazón, es porque este amor ya es eterno.
+  </p>
 </div>
 
-<script>
-// SLIDER AUTOMÁTICO
-let images = document.querySelectorAll(".slider img");
-let index = 0;
 
-setInterval(() => {
-  images[index].classList.remove("active");
-  index = (index + 1) % images.length;
-  images[index].classList.add("active");
-}, 2500);
+<section class="final reveal" id="final">
+  <h2>
+    Te elijo hoy.<br>
+    Te elijo en la distancia.<br>
+    Te elijo para siempre. ♾️
+  </h2>
+  <button onclick="promesa()">Nuestro para siempre 💍</button>
+</section>
 
-// BOTONES
-const noBtn = document.getElementById("no");
-const yesBtn = document.getElementById("yes");
 
-noBtn.addEventListener("mouseover", () => {
-  alert("No dejaré escapar a una grandiosa mujer ❤️");
 
-  const x = Math.random() * 200;
-  const y = Math.random() * 40;
-  noBtn.style.left = x + "px";
-  noBtn.style.top = y + "px";
 
-  let size = parseInt(window.getComputedStyle(yesBtn).fontSize);
-  yesBtn.style.fontSize = (size + 4) + "px";
-});
-
-yesBtn.addEventListener("click", () => {
-  alert("Sabía que dirías que sí, te amo 🥰 ♥️");
-});
-</script>
-
+<script src="script.js"></script>
 </body>
+
+
+<audio id="musica" preload="auto" loop>
+  <source src="musica/piano.mp3" type="audio/mpeg">
+</audio>
+
+
+
+
 
 </html>

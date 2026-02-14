@@ -1,0 +1,373 @@
+body {
+  margin: 0;
+  font-family: 'Georgia', serif;
+  background: radial-gradient(circle at top, #1b2735 0%, #090a0f 100%);
+  color: #fff;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+.stars {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  z-index: -1;
+}
+
+.stars::after {
+  content: "✨ ✨ ✨ ✨ ✨";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  animation: twinkle 10s infinite linear;
+  font-size: 20px;
+}
+
+@keyframes twinkle {
+  from { opacity: 0.3; }
+  to { opacity: 1; }
+}
+
+
+section {
+  padding: 40px 20px;
+}
+
+.hero h1 {
+  font-size: 2.5em;
+}
+
+.galeria img {
+  width: 200px;
+  border-radius: 15px;
+  margin: 10px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+video {
+  width: 80%;
+  border-radius: 20px;
+}
+
+button {
+  background: #ff4d6d;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.2em;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+
+nav {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 250px;
+  height: 100%;
+  background: rgba(255, 77, 109, 0.95);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: 0.4s;
+  z-index: 999;
+}
+
+nav a {
+  color: white;
+  font-size: 1.4em;
+  margin: 15px;
+  text-decoration: none;
+}
+
+
+.hearts::before,
+.hearts::after {
+  content: "💖 💕 💗 💘 💞";
+  position: fixed;
+  top: -10%;
+  font-size: 30px;
+  animation: float 10s linear infinite;
+}
+
+@keyframes float {
+  from {
+    top: 100%;
+    opacity: 1;
+  }
+  to {
+    top: -10%;
+    opacity: 0;
+  }
+}
+
+.carta {
+  max-width: 800px;
+  margin: auto;
+  font-size: 1.2em;
+  line-height: 1.8;
+  background: rgba(255, 255, 255, 0.6);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.recuerdos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.recuerdos img {
+  width: 220px;
+  margin: 15px;
+  border-radius: 20px;
+  transition: transform 0.5s, box-shadow 0.5s;
+}
+
+.recuerdos img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 20px 40px rgba(255, 182, 193, 0.6);
+}
+
+.carta-box {
+  max-width: 850px;
+  margin: auto;
+  padding: 50px 40px;
+  background: linear-gradient(145deg, rgba(255,255,255,0.15), rgba(255,255,255,0.05));
+  border-radius: 30px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 0 40px rgba(255,182,193,0.4);
+  animation: fadeUp 3s ease;
+}
+
+.carta-box h2 {
+  font-size: 2em;
+  color: #ffb6c1;
+  margin-bottom: 30px;
+}
+
+.carta-text {
+  font-size: 1.25em;
+  line-height: 2;
+  color: #fff;
+}
+
+.firma {
+  display: block;
+  margin-top: 30px;
+  font-size: 1.3em;
+  color: #ffb6c1;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.final button {
+  animation: latido 1.5s infinite;
+}
+
+@keyframes latido {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+.music-btn {
+  margin-top: 20px;
+  background: rgba(255, 182, 193, 0.9);
+  color: #4a0033;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 30px;
+  font-size: 1.1em;
+  cursor: pointer;
+  animation: latido 1.5s infinite;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 1.5s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.secreto span {
+  font-size: 40px;
+  cursor: pointer;
+}
+
+#mensajeSecreto {
+  display: none;
+  margin-top: 15px;
+  font-style: italic;
+  color: #ffb6c1;
+}
+
+.recuerdo {
+  margin: 40px auto;
+  max-width: 300px;
+}
+
+.recuerdo img {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(255,182,193,0.4);
+}
+
+.recuerdo p {
+  margin-top: 10px;
+  font-style: italic;
+  color: #ffb6c1;
+}
+
+.gallery {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.gallery h2 {
+  font-size: 2.5em;
+  margin-bottom: 40px;
+  color: #ffd1dc;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.photo {
+  background: rgba(255,255,255,0.05);
+  padding: 15px;
+  border-radius: 20px;
+  backdrop-filter: blur(8px);
+  animation: fadeUp 1.5s ease;
+}
+
+.photo img {
+  width: 100%;
+  border-radius: 15px;
+}
+
+.photo p {
+  margin-top: 12px;
+  font-size: 1em;
+  color: #fff;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.memories {
+  padding: 90px 20px;
+  text-align: center;
+}
+
+.memories h2 {
+  font-size: 2.8em;
+  margin-bottom: 50px;
+  color: #ffd1dc;
+}
+
+.memory-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+.memory {
+  position: relative;
+  background: rgba(255,255,255,0.08);
+  border-radius: 22px;
+  padding: 12px;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  transition: transform 0.4s ease;
+}
+
+.memory:hover {
+  transform: scale(1.05);
+}
+
+.memory img,
+.memory video {
+  width: 100%;
+  border-radius: 18px;
+}
+
+.memory span {
+  display: block;
+  margin-top: 12px;
+  font-size: 1em;
+  color: #fff;
+  opacity: 0.85;
+}
+
+.memories {
+  padding: 90px 20px;
+  text-align: center;
+}
+
+.memories h2 {
+  font-size: 2.8em;
+  margin-bottom: 50px;
+  color: #ffd1dc;
+}
+
+.memory-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+.memory {
+  position: relative;
+  background: rgba(255,255,255,0.08);
+  border-radius: 22px;
+  padding: 12px;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  transition: transform 0.4s ease;
+}
+
+.memory:hover {
+  transform: scale(1.05);
+}
+
+.memory img,
+.memory video {
+  width: 100%;
+  border-radius: 18px;
+}
+
+.memory span {
+  display: block;
+  margin-top: 12px;
+  font-size: 1em;
+  color: #fff;
+  opacity: 0.85;
+}
