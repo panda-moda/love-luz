@@ -371,3 +371,12 @@ nav a {
   color: #fff;
   opacity: 0.85;
 }
+
+#mensaje1, #mensaje2 {
+  font-size: 36px;   /* Ajusta el número para hacerlo más grande o más pequeño */
+  font-weight: bold; /* Para que se vea más destacado */
+  text-align: center; /* Para centrarlo en la página */
+  line-height: 1.5;  /* Para que tenga espacio entre líneas */
+  color: #ff4d6d;    /* Color romántico */
+}
+
