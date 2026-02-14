@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Para Ti ❤️</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #ff758c, #ff7eb3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.card {
+  background: white;
+  width: 90%;
+  max-width: 380px;
+  border-radius: 25px;
+  padding: 20px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+  animation: fadeIn 1.5s ease;
+  text-align: center;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.title {
+  color: #e60073;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.names {
+  font-weight: bold;
+  color: #ff4d88;
+  margin-bottom: 15px;
+}
+
+.slider {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.slider img {
+  width: 100%;
+  display: none;
+}
+
+.slider img.active {
+  display: block;
+}
+
+video {
+  width: 100%;
+  border-radius: 20px;
+  margin-top: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.question {
+  font-size: 20px;
+  margin: 20px 0;
+  color: #333;
+}
+
+.buttons {
+  position: relative;
+  height: 80px;
+}
+
+button {
+  font-size: 18px;
+  padding: 10px 22px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+#yes {
+  background: #ff4d88;
+  color: white;
+}
+
+#no {
+  background: #ddd;
+  position: absolute;
+}
+
+.footer {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #888;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+  <div class="title">Para mi amor ❤️</div>
+  <div class="names">Luz 💕 Allison</div>
+
+  <!-- GALERÍA -->
+  <div class="slider">
+    <img src="foto1.jpeg" class="active">
+    <img src="foto2.jpeg">
+    <img src="foto3.jpeg">
+    <img src="foto4.jpeg">
+    <img src="foto5.jpeg">
+  </div>
+
+  <!-- VIDEO -->
+  <video controls>
+    <source src="video.mp4" type="video/mp4">
+  </video>
+
+  <div class="question">
+    ¿Aceptas ser mi San Valentín para siempre ♥️?
+  </div>
+
+  <div class="buttons">
+    <button id="yes">Sí 💘</button>
+    <button id="no">No</button>
+  </div>
+
+  <div class="footer">
+    Hecho con amor 💖
+  </div>
+
+</div>
+
+<script>
+// SLIDER AUTOMÁTICO
+let images = document.querySelectorAll(".slider img");
+let index = 0;
+
+setInterval(() => {
+  images[index].classList.remove("active");
+  index = (index + 1) % images.length;
+  images[index].classList.add("active");
+}, 2500);
+
+// BOTONES
+const noBtn = document.getElementById("no");
+const yesBtn = document.getElementById("yes");
+
+noBtn.addEventListener("mouseover", () => {
+  alert("No dejaré escapar a una grandiosa mujer ❤️");
+
+  const x = Math.random() * 200;
+  const y = Math.random() * 40;
+  noBtn.style.left = x + "px";
+  noBtn.style.top = y + "px";
+
+  let size = parseInt(window.getComputedStyle(yesBtn).fontSize);
+  yesBtn.style.fontSize = (size + 4) + "px";
+});
+
+yesBtn.addEventListener("click", () => {
+  alert("Sabía que dirías que sí, te amo 🥰 ♥️");
+});
+</script>
+
+</body>
+
+</html>
